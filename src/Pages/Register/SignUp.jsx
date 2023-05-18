@@ -40,7 +40,7 @@ const SignUp = () => {
       })
       .catch((error) => {
         console.log(error);
-        // setError(error.message);
+        setPassError(error.message);
       });
   };
   const updateUserData = (user, displayName, photo) => {
@@ -57,7 +57,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="hero min-h-screen bg-base-200">
+    <div className="hero bg-base-200">
       <div className="hero-content flex-col lg:flex-row">
         <div className="w-1/2 mr-12">
           <img
@@ -108,7 +108,7 @@ const SignUp = () => {
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Password</span>
-                  <h5 className="text-warning">{error}</h5>
+                 
                 </label>
                 <input
                   type="text"
@@ -117,6 +117,7 @@ const SignUp = () => {
                   className="input input-bordered"
                   required
                 />
+                   <h5 className="text-red-600 font-bold my-2">{error}</h5>
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">
                     Forgot password?

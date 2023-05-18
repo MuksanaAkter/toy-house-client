@@ -3,6 +3,7 @@ import Main from "../Layouts/Main";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/Register/SignUp";
+import AddToy from "../Pages/AddToys/AddToy";
 
 const router = createBrowserRouter([
     {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
             path: 'signup', 
             element: <SignUp></SignUp>
         },
+        {
+          path: 'addtoy', 
+          element: <AddToy></AddToy>
+      },
     //     {
     //       path: 'about', 
     //       element:<About></About>

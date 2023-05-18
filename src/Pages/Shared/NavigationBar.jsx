@@ -14,14 +14,6 @@ const NavigationBar = () => {
       <li>
         <Link to="/bookings">Blog</Link>
       </li>
-      <li>
-        <button>Log out</button>
-      </li>
-
-      <li>
-        {" "}
-        <Link to="/login">Login</Link>{" "}
-      </li>
     </>
   );
   return (
@@ -59,7 +51,7 @@ const NavigationBar = () => {
           <ul className="menu menu-horizontal px-1">{navItems}</ul>
         </div>
         <div className="navbar-end">
-          <button className="btn btn-outline btn-warning">Login</button>
+          <button className="btn btn-primary bg-cyan-800 border-0 "><Link to="/login">Login</Link></button>
         </div>
       </div>
     </div>

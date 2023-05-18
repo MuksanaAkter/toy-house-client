@@ -1,19 +1,24 @@
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { Button } from "react-daisyui";
+import { FaGoogle } from "react-icons/fa";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import app from "../../Firebase/firebase.config";
 
 
 const Login = () => {
 
-    //     const [user, setUser] = useState(null);
+ const [user, setUser] = useState(null);
+ console.log(user);
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
 
   const from = location.state?.from?.pathname || "/";
     const { signIn } = useContext(AuthContext);
-
-
+    const auth = getAuth(app);
+    const GoogleProvider = new GoogleAuthProvider();
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
@@ -31,6 +36,19 @@ const Login = () => {
                 setError(error.message);
               });
     }
+    const handleGoogle = (event) => {
+        event.preventDefault();
+        signInWithPopup(auth, GoogleProvider)
+          .then((result) => {
+            const logUser = result.user;
+            //console.log(logUser);
+            setUser(logUser);
+            navigate(from, { replace: true });
+          })
+          .catch((error) => {
+            console.log("error", error.message);
+          });
+      };
 
     return (
         <div>
@@ -49,14 +67,16 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="text" name='email' placeholder="email" className="input input-bordered" />
+                                <input type="text" name='email' placeholder="email"
+                                required className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
-                                    <h5 className="text-warning">{error}</h5>
+                                   
                                 </label>
-                                <input type="text" name='password' placeholder="password" className="input input-bordered" />
+                                <input type="text" name='password' placeholder="password" required className="input input-bordered" />
+                                <h5 className="text-red-600 font-bold my-2">{error}</h5>
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
@@ -67,6 +87,10 @@ const Login = () => {
                         </form>
                         <p className='my-4 text-center'>New to Car Doctors <Link className='text-orange-600 font-bold' to="/signup">Sign Up</Link> </p>
                     </div>
+                    <Button onClick={handleGoogle} className="me-3" variant="primary">
+                {" "}
+                <FaGoogle /> Login with Google
+              </Button>
                 </div>
             </div>
         </div>

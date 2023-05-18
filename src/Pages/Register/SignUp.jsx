@@ -1,11 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { updateProfile } from "firebase/auth";
 
 const SignUp = () => {
 
 //     const [user, setUser] = useState(null);
-//   const [error, setError] = useState("");
+ const [error, setPassError] = useState("");
 //   const navigate = useNavigate();
 //   const location = useLocation();
 
@@ -18,13 +19,23 @@ const SignUp = () => {
     const form = event.target;
     const name = form.name.value;
     const email = form.email.value;
+    const photo = form.photo.value;
     const password = form.password.value;
-    console.log(name, email, password);
+    console.log(name, email, password, photo);
+
+    if (!/(?=.*[A-Z])/.test(password)) {
+        setPassError("Please add atleast one Upperase");
+        return;
+      } else if (password.length < 6) {
+        setPassError("Please add atleast 6 charecters in your password");
+        return;
+      }
 
     createUser(email, password)
       .then((result) => {
         const user = result.user;
         console.log(user);
+        updateUserData(result.user , name , photo);
         
       })
       .catch((error) => {
@@ -32,6 +43,19 @@ const SignUp = () => {
         // setError(error.message);
       });
   };
+  const updateUserData = (user, displayName, photo) => {
+    updateProfile(user, {
+      displayName: displayName,
+      photoURL: photo,
+    })
+      .then(() => {
+        console.log("user updated");
+      })
+      .catch((error) => {
+        setPassError(error.message);
+      });
+  };
+
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row">
@@ -54,6 +78,7 @@ const SignUp = () => {
                   name="name"
                   placeholder="name"
                   className="input input-bordered"
+                  required
                 />
               </div>
               <div className="form-control">
@@ -65,6 +90,7 @@ const SignUp = () => {
                   name="email"
                   placeholder="email"
                   className="input input-bordered"
+                  required
                 />
               </div>
               <div className="form-control">
@@ -73,21 +99,23 @@ const SignUp = () => {
                 </label>
                 <input
                   type="text"
-                  name="Photo"
-                  placeholder="Photo URL"
+                  name="photo"
+                  placeholder="photo URL"
                   className="input input-bordered"
+                  required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Password</span>
-                  {/* <h5 className="text-warning">{error}</h5> */}
+                  <h5 className="text-warning">{error}</h5>
                 </label>
                 <input
                   type="text"
                   name="password"
                   placeholder="password"
                   className="input input-bordered"
+                  required
                 />
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">

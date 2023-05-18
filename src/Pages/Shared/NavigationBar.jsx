@@ -69,7 +69,7 @@ const NavigationBar = () => {
             <div style={{ width: "50px" }} className="me-2" id="clickable">
               {" "}
               <img
-                className="rounded-circle "
+                className="rounded-full"
                 style={{ width: "40px" }}
                 src={user.photoURL}
                 alt=""

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import signup from "../../assets/is_prev_ui.png";
+import Swal from 'sweetalert2'
 const SignUp = () => {
   //     const [user, setUser] = useState(null);
   const [error, setPassError] = useState("");
@@ -29,6 +30,13 @@ const SignUp = () => {
       setPassError("Please add atleast 6 charecters in your password");
       return;
     }
+    Swal.fire({
+        icon: 'success',
+        title: 'Success!',
+        text: 'Registration Successfully Done',
+        
+       
+      })
 
     createUser(email, password)
       .then((result) => {
@@ -133,7 +141,7 @@ const SignUp = () => {
             </form>
             <p className="my-4 text-center">
               Already Have an Account?{" "}
-              <Link className="text-orange-600 font-bold" to="/login">
+              <Link className="text-pink-600 font-bold" to="/login">
                 Login
               </Link>{" "}
             </p>

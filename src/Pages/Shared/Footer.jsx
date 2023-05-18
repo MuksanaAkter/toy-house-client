@@ -32,7 +32,7 @@ const Footer = () => {
           <p className="flex flex-row items-center mb-2">
           <FaAddressBook className="mr-2"></FaAddressBook>Addresss: 1800 Abbot Kinney Nebraska UK
           </p >
-          <p className="flex flex-row  items-centerimb-2"><FaVoicemail className="mr-2"></FaVoicemail>Email: hello@example.com</p>
+          <p className="flex flex-row  items-centeri mb-2"><FaVoicemail className="mr-2"></FaVoicemail>Email: hello@example.com</p>
           <p className="flex flex-row items-center mb-2"><FaPhone className="mr-2"></FaPhone>Phone: (012) 345 6789</p>
         </div>
         

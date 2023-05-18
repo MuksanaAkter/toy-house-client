@@ -117,14 +117,14 @@ const Login = () => {
     // </div>
     <div>
       <div
-        style={{ backgroundImage: `url(${backgroundImage})` }}
-        className="hero py-10 bg-base-200"
+        // style={{ backgroundImage: `url(${backgroundImage})` }}
+        className="hero py-10 bg-cyan-200"
       >
         <div
           style={{ backgroundImage: `url(${backgroundImage})` }}
           className=" hero-content flex-col-reverse gap-0 rounded-lg  shadow-2xl w-full bg-cyan-100 lg:flex-row-reverse"
         >
-          <div className=" animate__animated animate__fadeInRight py-20">
+          <div className=" animate__animated animate__fadeInRight  py-20">
             <img src={backgroundImageUrl} />
           </div>
           <div className=" animate__animated animate__fadeInLeft bg-pink-200 card  flex-shrink-0 w-full max-w-sm shadow-2xl ">
@@ -169,6 +169,7 @@ const Login = () => {
                     value="Login"
                   />
                 </div>
+                <p className="text-center mt-2">-----------or---------</p>
                 <button onClick={handleGoogle} className="btn btn-primary bg-cyan-800 border-0 w-full my-3"><FaGoogle className="mx-2"></FaGoogle> Login with Google</button>
               </form>
               <p className="my-4 text-center">

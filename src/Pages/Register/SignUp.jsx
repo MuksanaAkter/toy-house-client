@@ -1,16 +1,15 @@
 import { useContext, useState } from "react";
-import { Link, } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
-
+import signup from "../../assets/is_prev_ui.png";
 const SignUp = () => {
+  //     const [user, setUser] = useState(null);
+  const [error, setPassError] = useState("");
+  //   const navigate = useNavigate();
+  //   const location = useLocation();
 
-//     const [user, setUser] = useState(null);
- const [error, setPassError] = useState("");
-//   const navigate = useNavigate();
-//   const location = useLocation();
-
-//   const from = location.state?.from?.pathname || "/home";
+  //   const from = location.state?.from?.pathname || "/home";
 
   const { createUser } = useContext(AuthContext);
 
@@ -24,19 +23,18 @@ const SignUp = () => {
     console.log(name, email, password, photo);
 
     if (!/(?=.*[A-Z])/.test(password)) {
-        setPassError("Please add atleast one Upperase");
-        return;
-      } else if (password.length < 6) {
-        setPassError("Please add atleast 6 charecters in your password");
-        return;
-      }
+      setPassError("Please add atleast one Upperase");
+      return;
+    } else if (password.length < 6) {
+      setPassError("Please add atleast 6 charecters in your password");
+      return;
+    }
 
     createUser(email, password)
       .then((result) => {
         const user = result.user;
         console.log(user);
-        updateUserData(result.user , name , photo);
-        
+        updateUserData(result.user, name, photo);
       })
       .catch((error) => {
         console.log(error);
@@ -55,18 +53,20 @@ const SignUp = () => {
         setPassError(error.message);
       });
   };
-
+    const backgroundImage =
+    "https://png.pngtree.com/background/20210715/original/pngtree-white-abstract-background-3d-paper-style-picture-image_1300962.jpg";
   return (
-    <div className="hero bg-base-200">
-      <div className="hero-content flex-col lg:flex-row">
-        <div className="w-1/2 mr-12">
-          <img
-            src="https://img.freepik.com/free-vector/auto-service-illustration_1284-20618.jpg?w=826&t=st=1683956327~exp=1683956927~hmac=f281a6952c5c23c934ef0d8b1653c0aef3ec39d7979bf409b3d7550e05765302"
-            alt=""
-          />
+    <div
+      style={{ backgroundImage: `url(${backgroundImage})` ,backgroundSize:"cover" }}
+      className="hero bg-base-200 w-full"
+    >
+      <div style={{ backgroundImage: `url(${backgroundImage})`,backgroundSize:"cover" }}
+       className="hero-content shadow-2xl rounded-xl my-10 flex-col-reverse lg:flex-row bg-cyan-100 px-10">
+        <div className=" mr-12 animate__animated animate__fadeInLeft ">
+          <img className="h-96 " src={signup} alt="" />
         </div>
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-          <div className="card-body">
+        <div className="card animate__animated animate__fadeInRight  flex-shrink-0 w-full max-w-sm shadow-2xl">
+          <div className="card-body bg-pink-100 rounded-lg shadow-2xl">
             <h1 className="text-3xl text-center font-bold">Sign Up</h1>
             <form onSubmit={handleSignUp}>
               <div className="form-control">
@@ -108,7 +108,6 @@ const SignUp = () => {
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Password</span>
-                 
                 </label>
                 <input
                   type="text"
@@ -117,7 +116,7 @@ const SignUp = () => {
                   className="input input-bordered"
                   required
                 />
-                   <h5 className="text-red-600 font-bold my-2">{error}</h5>
+                <h5 className="text-red-600 font-bold my-2">{error}</h5>
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">
                     Forgot password?
@@ -126,7 +125,7 @@ const SignUp = () => {
               </div>
               <div className="form-control mt-6">
                 <input
-                  className="btn btn-primary"
+                  className="btn btn-primary bg-cyan-800 border-0 rounded-lg"
                   type="submit"
                   value="Sign Up"
                 />

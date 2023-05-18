@@ -28,7 +28,7 @@ const NavigationBar = () => {
     </>
   );
   return (
-    <div className=" bg-pink-300">
+    <div className=" bg-pink-200">
       <div className=" max-w-7xl mx-auto navbar h-20 mb-0">
         <div className="navbar-start">
           <div className="dropdown">

@@ -5,9 +5,9 @@ import { AuthContext } from "../../Providers/AuthProvider";
 const MyToys = () => {
     const{ user } = useContext(AuthContext)
   const [mytoys, setmytoy] = useState([]);
-  console.log(mytoys);
+  //console.log(mytoys);
   useEffect(() => {
-    fetch(`http://localhost:4000/mytoys/${user.email}`)
+    fetch(`https://toy-house-server-one.vercel.app/mytoys/${user?.email}`)
       .then((res) => res.json())
       .then((result) => {
         setmytoy(result);

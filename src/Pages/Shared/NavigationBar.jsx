@@ -14,21 +14,21 @@ const NavigationBar = () => {
 
   const navItems = (
     <>
-      <li>
+      <li className="font-bold">
         <Link to="/">Home</Link>{" "}
       </li>
-      <li>
+      <li className="font-bold">
         {" "}
         <Link to="/alltoy">All Toys</Link>{" "}
       </li>
 
-      <li>
+      <li className="font-bold">
         <Link to="/blog">Blog</Link>
       </li>
-      <li>
+      <li className="font-bold">
         <Link to="/addtoy">Add Toys</Link>
       </li>
-      <li>
+      <li className="font-bold">
         <Link to="/mytoy">My Toys</Link>
       </li>
     </>

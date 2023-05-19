@@ -5,7 +5,7 @@ import { FaGoogle } from "react-icons/fa";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../../Firebase/firebase.config";
 import backgroundImageUrl from "../../assets/bg-11_prev_ui.png";
-import Swal from 'sweetalert2'
+// import Swal from 'sweetalert2'
 
 const Login = () => {
   const [user, setUser] = useState(null);
@@ -24,13 +24,13 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
     //console.log(form, email, password)
-    Swal.fire({
-        icon: 'success',
-        title: 'Success!',
-        text: 'LogIn Successfully Done',
+    // Swal.fire({
+    //     icon: 'success',
+    //     title: 'Success!',
+    //     text: 'LogIn Successfully Done',
         
        
-      })
+    //   })
     signIn(email, password)
       .then((result) => {
         const user = result.user;

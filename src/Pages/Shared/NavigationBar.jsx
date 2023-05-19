@@ -28,6 +28,9 @@ const NavigationBar = () => {
       <li>
         <Link to="/addtoy">Add Toys</Link>
       </li>
+      <li>
+        <Link to="/mytoy">My Toys</Link>
+      </li>
     </>
   );
   return (

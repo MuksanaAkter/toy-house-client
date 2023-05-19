@@ -1,6 +1,6 @@
 const MyToyTable = ({ mytoy }) => {
-  const { picture, name, price, rating } = mytoy;
-  console.log(mytoy);
+  const { image, toyName, price, rating } = mytoy;
+  //console.log(mytoy);
   return (
     <div>
       
@@ -17,10 +17,10 @@ const MyToyTable = ({ mytoy }) => {
     <tbody className="mb-10">
       <tr className="">
         <td style={{width:"220px"}} className="py-2 px-3 border-b border-gray-300"><img style={{height:"200px", width:"200px"}}
-                      src={picture}
+                      src={image}
                       alt=""
                     /></td>
-        <td style={{width:"210px"}}className=" text-center py-2 px-4 border-b border-gray-300 text-2xl font-semibold">{name}</td>
+        <td style={{width:"210px"}}className=" text-center py-2 px-4 border-b border-gray-300 text-2xl font-semibold">{toyName}</td>
         <td style={{width:"210px"}}className=" text-center text-2xl font-semibold py-2 px-4 border-b border-gray-300">{price}</td>
         <td style={{width:"210px"}}className=" text-center text-2xl font-semibold py-2 px-4 border-b border-gray-300">{rating}</td>
         <th className="py-2 px-4 border-b border-gray-300">

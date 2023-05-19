@@ -1,16 +1,18 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import MyToyTable from "./MyToyTable";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const MyToys = () => {
+    const{ user } = useContext(AuthContext)
   const [mytoys, setmytoy] = useState([]);
   console.log(mytoys);
   useEffect(() => {
-    fetch("http://localhost:4000/mytoys")
+    fetch(`http://localhost:4000/mytoys/${user.email}`)
       .then((res) => res.json())
       .then((result) => {
         setmytoy(result);
       });
-  }, []);
+  }, [user.email]);
 
   return (
     <div className=" pb-10">

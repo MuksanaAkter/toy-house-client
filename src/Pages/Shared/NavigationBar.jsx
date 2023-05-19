@@ -19,11 +19,11 @@ const NavigationBar = () => {
       </li>
       <li>
         {" "}
-        <Link to="/about">About</Link>{" "}
+        <Link to="/alltoy">All Toys</Link>{" "}
       </li>
 
       <li>
-        <Link to="/bookings">Blog</Link>
+        <Link to="/blog">Blog</Link>
       </li>
       <li>
         <Link to="/addtoy">Add Toys</Link>

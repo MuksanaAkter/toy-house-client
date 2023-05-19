@@ -40,7 +40,7 @@ const AddToy = () => {
           </div>
           <div>
             <label className="label">
-              <span className="label-text">Name</span>
+              <span className="label-text">Toy Name</span>
             </label>
             <input
               className="text-input p-5 my-3"
@@ -58,6 +58,17 @@ const AddToy = () => {
               {...register("price")}
               placeholder="Price"
               defaultValue="20"
+            />
+          </div>
+          <div>
+            <label className="label">
+              <span className="label-text">Quantity</span>
+            </label>
+            <input
+              className="text-input p-5 my-3"
+              {...register("Quantity")}
+              placeholder="Quantity"
+              defaultValue="4"
             />
           </div>
           <div>

@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import ToyDetails from "./ToyDetails";
 
 
 const AllToys = () => {
   const [alltoys, setalltoy] = useState([]);
+  const [toys, settoy] = useState([])
   const [searchText, setSearchText] = useState("");
-  console.log(searchText);
+  //console.log(searchText);
   useEffect(() => {
     fetch("https://toy-house-server-one.vercel.app/alltoys")
       .then((res) => res.json())
@@ -12,18 +15,18 @@ const AllToys = () => {
         setalltoy(result);
       });
   }, []);
-
- 
-  // useEffect(() => {
-  //   fetch(`http://localhost:5000/getToys/${searchText}`)
-  //     .then((res) => res.json())
-  //     .then((result) => {
-  //       setalltoy(result);
-  //     });
-  // }, [searchText]);
+  
+  useEffect(() => {
+    fetch(`https://toy-house-server-one.vercel.app/alltoys/${alltoys._id}`)
+      .then((res) => res.json())
+      .then((result) => {
+        settoy(result);
+      });
+  }, [alltoys]);
+  console.log(toys);
 
   const handleSearch = () => {
-    fetch(`http://localhost:5000/getToys/${searchText}`)
+    fetch(`https://toy-house-server-one.vercel.app/getToys/${searchText}`)
       .then((res) => res.json())
       .then((data) => {
         //console.log(data);
@@ -32,6 +35,7 @@ const AllToys = () => {
        
       });
   };
+
 
   return (
     <div>
@@ -76,7 +80,7 @@ const AllToys = () => {
               <td className="text-center p-3"> {alltoy.quantity}</td>
               <td>
               <button className="btn btn-ghost btn-sm text-sm bg-green-500 m-2">
-                View Detail
+              <Link to={'/detail'}>View Detail</Link>
               </button>
               </td>
             </tr>
@@ -84,11 +88,11 @@ const AllToys = () => {
         </tbody>
       </table>
 
-      {/* <div className=" grid  grid-cols-2 gap-5 max-w-7xl mx-auto  ">
-        {alltoys?.map((alltoy) => (
-          <AllToyCard key={alltoy._id} alltoy={alltoy}></AllToyCard>
+      <div className=" grid  grid-cols-2 gap-5 max-w-7xl mx-auto  ">
+        {toys?.map((toy) => (
+          <ToyDetails key={toy._id} toy={toy}></ToyDetails>
         ))}
-      </div> */}
+      </div>
     </div>
   );
 };

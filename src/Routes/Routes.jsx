@@ -9,6 +9,8 @@ import AllToys from "../Pages/AllToys/AllToys";
 import Blog from "../Pages/Blog/Blog";
 import Error from "../Pages/Error/Error";
 import Update from "../Pages/Update/Update";
+import ToyDetails from "../Pages/AllToys/ToyDetails";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -47,13 +49,18 @@ const router = createBrowserRouter([
       {
         path: '/update/:id', 
         element:<Update></Update>,
-        loader:({params})=> fetch(`http://localhost:5000/mytoy/${params.id}`),
+        loader:({params})=> fetch(`https://toy-house-server-one.vercel.app/mytoy/${params.id}`),
     },
+    {
+      path: '/detail', 
+      element:<PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>
+      // loader:({params})=> fetch(`https://toy-house-server-one.vercel.app/alltoys/${params.id}`),
+  },
     // {
     //       path: 'bookings',
     //       element:<PrivateRoute><Bookings></Bookings></PrivateRoute>
           
-    //     }
+    //     }http://localhost:5000/alltoys/6468ae8582fca9e071bedd2f
       ]
     },
   ]);

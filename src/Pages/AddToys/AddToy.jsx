@@ -45,6 +45,7 @@ const AddToy = () => {
               <span className="label-text text-xl font-semibold ">Photo</span>
             </label>
             <input
+            required
               className=" shadow-lg text-input p-5 w-full "
               {...register("image")}
               placeholder="image link"
@@ -57,6 +58,7 @@ const AddToy = () => {
               <span className="label-text">Toy Name</span>
             </label>
             <input
+            required
               className="w-full text-input p-5 my-3"
               {...register("toyName")}
               placeholder="name"
@@ -68,10 +70,11 @@ const AddToy = () => {
               <span className="label-text">Seller Name</span>
             </label>
             <input
+            required
               className=" w-full text-input p-5 my-3"
               {...register("sellername")}
               placeholder="name"
-              defaultValue="Popy"
+              defaultValue={user?.displayName}
             />
           </div>
           <div>
@@ -79,6 +82,7 @@ const AddToy = () => {
               <span className="label-text">Seller Email</span>
             </label>
             <input
+            required
               className="w-full text-input p-5 my-3"
               {...register("email")}
               placeholder="email"
@@ -90,6 +94,7 @@ const AddToy = () => {
               <span className="label-text">Price</span>
             </label>
             <input
+            required
               className="w-full text-input p-5"
               {...register("price")}
               placeholder="Price"
@@ -101,6 +106,7 @@ const AddToy = () => {
               <span className="label-text">Quantity</span>
             </label>
             <input
+            required
               className=" w-full text-input p-5 my-3"
               {...register("quantity")}
               placeholder="Quantity"
@@ -112,6 +118,7 @@ const AddToy = () => {
               <span className="label-text">Rating</span>
             </label>
             <input
+            required
               className=" w-full text-input p-5 my-3"
               {...register("rating")}
               placeholder="Rating"

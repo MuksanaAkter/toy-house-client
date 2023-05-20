@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 // import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const MyToys = () => {
   const { user } = useContext(AuthContext);
@@ -26,7 +27,12 @@ const MyToys = () => {
         .then((data) => {
           console.log(data);
           if (data.deletedCount > 0) {
-            alert("deleted successful");
+            Swal.fire({
+            icon: 'success',
+            title: 'Success!',
+            text: 'Uptaded Toy Successfully',
+               
+          })
             const remaining = mytoys.filter((mytoy) => mytoy._id !== id);
             setmytoy(remaining);
           }
@@ -34,27 +40,6 @@ const MyToys = () => {
     }
   };
 
-  // const handleUpdate = (id) => {
-  //   fetch(`http://localhost:5000/mytoys/${id}`, {
-  //     method: "PATCH",
-  //     headers: {
-  //       "content-type": "application/json",
-  //     },
-  //     body: JSON.stringify(id),
-  //   })
-  //     .then((res) => res.json())
-  //     .then((result) => {
-  //       console.log(result);
-  //       if (result.modifiedCount > 0) {
-  //         // update state
-  //         Swal.fire({
-  //           icon: "success",
-  //           title: "Success!",
-  //           text: "Added Toy Successfully",
-  //         });
-  //       }
-  //     });
-  // };
   return (
     <div className=" pb-10">
       <div className="text-center text-5xl font-bold py-8 ">My Toys</div>

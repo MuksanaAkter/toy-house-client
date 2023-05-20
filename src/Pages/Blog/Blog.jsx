@@ -1,16 +1,20 @@
+
+const bg="https://f2.toyhou.se/file/f2-toyhou-se/images/15548415_NPQGgIUidDh2OQK.png"
+
 const Blog = () => {
   return (
     <div>
       <div>
         <div className="">
-          <h1 className="text-center text-danger my-5">Blog Page</h1>
+        <div style={{ backgroundImage: `url(${bg})` ,backgroundSize:"cover", height:"" }} className="text-center text-5xl font-bold py-8 h-40">Blog Page</div>
+          <h1 className="text-center text-danger my-5"></h1>
         </div>
         <div>
           <div className="container d-flex justify-content-end my-4"></div>
         </div>
-        <div className="container mx-auto ">
-          <div className="p-3 bg-purple-50">
-            <h3 className=" text-2xl font-bold text-purple-600">
+        <div className="container mx-auto  ">
+          <div className="p-7 bg-yellow-100 ">
+            <h3 className=" text-2xl font-bold text-purple-600 pb-5">
               1. What is an access token and refresh token? How do they work and
               where should we store them on the client-side?
             </h3>
@@ -20,7 +24,7 @@ const Blog = () => {
               </span>{" "}
               A short-lived credential used for authentication and
               authorization, typically sent with each request to access
-              protected resources.
+              protected resources.<br></br><br></br>
               <span className="text-xl text-cyan-600 font-bold">
                 Refresh Token:{" "}
               </span>{" "}
@@ -32,9 +36,9 @@ const Blog = () => {
               security implications.
             </p>
           </div>
-          <div className="p-3 my-4 bg-green-100">
+          <div className="p-7 my-4 bg-green-100">
             <div>
-              <h3 className=" text-2xl font-bold text-purple-600">
+              <h3 className=" text-2xl font-bold text-purple-600 pb-5">
                 2. Compare SQL and NoSQL databases?
               </h3>
               <p className="">
@@ -69,7 +73,7 @@ const Blog = () => {
               </p>
             </div>
           </div>
-          <div  className="p-3 bg-blue-100">
+          <div  className="p-7 bg-blue-100">
             <h3 className="text-2xl font-bold text-purple-500 ">
               3.What is express js? What is Nest JS?
             </h3>
@@ -80,7 +84,7 @@ const Blog = () => {
             </p>
           </div>
 
-          <div  className="p-3 my-4 bg-red-100">
+          <div  className="p-7 my-4 bg-red-100">
             <h3 className="text-2xl font-bold text-purple-500 ">
               4. What is MongoDB aggregate and how does it work?
             </h3>

@@ -1,11 +1,14 @@
 import { FaRegStar, FaStar } from "react-icons/fa";
 import Rating from "react-rating";
+import { Link } from "react-router-dom";
+import { Fade } from "react-reveal";
 
 const ToyCard = ({toy}) => {
     //console.log(toy);
     const { name , price , rating , picture } = toy;
     return (
         <div className=" ">
+          <Fade buttom>
            <div className="card card-side bg-sky-100 shadow-xl">
   <figure><img className="h-40 w-30 m-3" src={picture} alt=""/></figure>
   <div className="card-body">
@@ -23,10 +26,11 @@ const ToyCard = ({toy}) => {
                     <span className='mx-2'> {rating}</span>
         </div>
     <div className="card-actions justify-end">
-      <button className="btn btn-primary bg-pink-500 border-0">View Detail</button>
+      <button className="btn btn-primary bg-pink-500 border-0"><Link to={'/detail'}>View Detail</Link></button>
     </div>
   </div>
 </div>
+</Fade>
         </div>
     );
 };

@@ -12,7 +12,10 @@ import Update from "../Pages/Update/Update";
 import ToyDetails from "../Pages/AllToys/ToyDetails";
 import PrivateRoute from "./PrivateRoute";
 
+
 const router = createBrowserRouter([
+
+  
     {
       path: "/",
       element: <Main></Main>,

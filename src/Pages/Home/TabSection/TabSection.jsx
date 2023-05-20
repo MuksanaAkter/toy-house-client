@@ -8,7 +8,7 @@ const TabSection = () => {
     const [activeTab, setActiveTab] = useState("a");
   
     useEffect(() => {
-      fetch(`http://localhost:4000/tabtoys/${activeTab}`)
+      fetch(`https://toy-house-server-one.vercel.app/tabtoys/${activeTab}`)
         .then((res) => res.json())
         .then((result) => {
           settoy(result);
@@ -33,9 +33,9 @@ const TabSection = () => {
               Wooden
             </div>
             <div
-              onClick={() => handleTabClick("softtoy")}
-              className={`tab  font-bold text-xl    rounded-lg Offline ${
-                activeTab == "softtoy" ? " bg-cyan-500 text-white" : ""
+              onClick={() => handleTabClick("Plastic")}
+              className={`tab  font-bold text-xl    rounded-lg plastic ${
+                activeTab == "Plastic" ? " bg-cyan-500 text-white" : ""
               }`}
             >
               SoftToys

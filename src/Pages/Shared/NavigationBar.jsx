@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { Tooltip } from "react-tooltip";
 
 const NavigationBar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -25,12 +26,19 @@ const NavigationBar = () => {
       <li className="font-bold">
         <Link to="/blog">Blog</Link>
       </li>
-      <li className="font-bold">
+      
+      
+      { user?.email ?  <>
+        <li className="font-bold">
         <Link to="/addtoy">Add Toys</Link>
       </li>
       <li className="font-bold">
         <Link to="/mytoy">My Toys</Link>
       </li>
+            
+        </> 
+        : <li> </li>
+       }
     </>
   );
   return (
@@ -69,6 +77,16 @@ const NavigationBar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navItems}</ul>
         </div>
+        {user && (
+                // <Tooltip className=""  place="BottomRight" anchorSelect="#clickable">
+                //   <button className="bg-blue">{user.displayName}</button>
+                // </Tooltip>
+                <Tooltip anchorSelect="#clickable" className='text-dark bg-light'>
+                <button className='text-dark bg-light border-0 '>{user.displayName}</button>
+                </Tooltip>
+                
+                
+              )}
 
         <div className="navbar-end">
           {user && (

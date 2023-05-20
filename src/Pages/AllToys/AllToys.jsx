@@ -39,7 +39,7 @@ const AllToys = () => {
 
   return (
     <div>
-      <div className="text-center text-5xl font-bold py-8 ">ALL Toys</div>
+      <div style={{ fontFamily: "Mogra, cursive" }}  className="text-center text-5xl font-bold py-8 ">ALL Toys</div>
 
       <div className="search-box p-2 text-center">
           <input

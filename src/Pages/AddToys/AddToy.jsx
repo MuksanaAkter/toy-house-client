@@ -32,7 +32,7 @@ const AddToy = () => {
 
   return (
     <div className="  ">
-      <div className="text-center text-5xl font-bold py-8 ">Add Toys</div>
+      <div style={{ fontFamily: "Mogra, cursive" }} className="text-center text-5xl font-bold py-8 ">Add Toys</div>
       <form
         className="max-w-7xl mx-auto bg-blue-200 py-8 px-8 mb-5 shadow-lg"
         onSubmit={handleSubmit(onSubmit)}

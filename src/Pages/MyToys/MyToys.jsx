@@ -42,7 +42,7 @@ const MyToys = () => {
 
   return (
     <div className=" pb-10">
-      <div className="text-center text-5xl font-bold py-8 ">My Toys</div>
+      <div style={{ fontFamily: "Mogra, cursive" }} className="text-center text-5xl font-bold py-8 ">My Toys</div>
       <table className="table-auto max-w-7xl mx-auto w-full">
         <thead className="py-5">
           <tr>

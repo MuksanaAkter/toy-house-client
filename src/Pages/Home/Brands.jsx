@@ -11,7 +11,7 @@ const Brands = () => {
       ];
     return (
         <div className="bg-blue-50  pb-5">
-            <h1 className="text-center text-5xl font-semibold mb-8 pt-9">Toy Brands Section</h1>
+            <h1 style={{ fontFamily: "Mogra, cursive" }} className="text-center text-5xl font-semibold mb-8 pt-9">Toy Brands Section</h1>
             <div className="max-w-7xl mx-auto shadow-2xl mb-8 pb-8">
                 <Fade left>
       <div className="grid md:grid-cols-4 grid-cols-2 gap-8 rounded-lg p-5">

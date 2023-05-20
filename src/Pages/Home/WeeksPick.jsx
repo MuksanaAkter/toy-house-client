@@ -6,7 +6,7 @@ const WeeksPick = () => {
 
   return (
     <div className="slider-container my-5 bg-pink-100">
-          <h1 className="text-center text-cyan-600 text-5xl font-semibold mb-8 pt-9">Our Weekly Top Pick Toys</h1>
+          <h1 style={{ fontFamily: "Mogra, cursive" }} className="text-center text-cyan-600 text-5xl font-semibold mb-8 pt-9">Our Weekly Top Pick Toys</h1>
         
       <div className="max-w-7xl gap-4 mx-auto grid md:grid-cols-3  p-10 bg-pink-300">
         <div>

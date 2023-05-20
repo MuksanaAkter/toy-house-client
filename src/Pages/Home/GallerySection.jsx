@@ -15,7 +15,7 @@ const GallerySection = () => {
       ];
     return (
         <div className="bg-blue-100  pb-5">
-            <h1 className="text-center text-5xl font-semibold mb-8 pt-9">Toys Gallery Section</h1>
+            <h1 style={{ fontFamily: "Mogra, cursive" }} className="text-center text-5xl font-semibold mb-8 pt-9">Toys Gallery Section</h1>
             <div className="max-w-7xl bg-blue-300 mx-auto shadow-2xl mb-8 pb-8">
               <Fade bottom >
       <div className="grid md:grid-cols-3 grid-cols-2 gap-8 rounded-lg p-5">

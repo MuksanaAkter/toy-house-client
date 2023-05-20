@@ -33,12 +33,12 @@ const TabSection = () => {
               Wooden
             </div>
             <div
-              onClick={() => handleTabClick("Plastic")}
+              onClick={() => handleTabClick("plastic")}
               className={`tab  font-bold text-xl    rounded-lg plastic ${
-                activeTab == "Plastic" ? " bg-cyan-500 text-white" : ""
+                activeTab == "plastic" ? " bg-cyan-500 text-white" : ""
               }`}
             >
-              SoftToys
+              Plastic
             </div>
             <div
               onClick={() => handleTabClick("plush")}
@@ -50,7 +50,7 @@ const TabSection = () => {
             </div>
           </div>
            </div>
-           <div className=" max-w-7xl mx-auto gap-5 my-5 grid grid-cols-2">
+           <div className=" max-w-7xl mx-auto gap-5 my-5 grid md:grid-cols-2">
         {toys?.map((toy) => (
           <ToyCard 
           key={toy._id}

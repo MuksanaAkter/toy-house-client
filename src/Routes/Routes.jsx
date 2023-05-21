@@ -57,13 +57,8 @@ const router = createBrowserRouter([
     {
       path: '/detail/:id', 
       element:<PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-      loader:({params})=> fetch(`http://localhost:5000/alltoys/${params.id}`),
+      loader:({params})=> fetch(`https://toy-house-server-one.vercel.app/alltoys/${params.id}`),
   },
-    // {
-    //       path: 'bookings',
-    //       element:<PrivateRoute><Bookings></Bookings></PrivateRoute>
-          
-    //     }http://localhost:5000/alltoys/6468ae8582fca9e071bedd2f
       ]
     },
   ]);

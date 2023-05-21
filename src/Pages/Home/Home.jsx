@@ -1,5 +1,6 @@
 import Banner from "./Banner";
 import Brands from "./Brands";
+import FaqSection from "./FaqSection";
 import GallerySection from "./GallerySection";
 import TabSection from "./TabSection/TabSection";
 import WeeksPick from "./WeeksPick";
@@ -11,6 +12,7 @@ const Home = () => {
             <GallerySection></GallerySection>
             <TabSection></TabSection>
             <WeeksPick></WeeksPick>
+            <FaqSection></FaqSection>
             <Brands></Brands>
         </div>
     );

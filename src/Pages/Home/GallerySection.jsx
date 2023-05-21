@@ -1,6 +1,13 @@
 import { Fade } from "react-reveal";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const GallerySection = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
     const pictures = [
         'https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1550779055-41205640i9L.jpg?crop=1.00xw:0.874xh;0,0.0520xh&resize=980:*',
         'https://cf.shopee.ph/file/521503401c89dd9c76c595e91f742c34',
@@ -16,19 +23,23 @@ const GallerySection = () => {
     return (
         <div className="bg-blue-100  pb-5">
             <h1 style={{ fontFamily: "Mogra, cursive" }} className="text-center text-5xl font-semibold mb-8 pt-9">Toys Gallery Section</h1>
+            <Fade buttom >
             <div className="max-w-7xl bg-blue-300 mx-auto shadow-2xl mb-8 pb-8">
-              <Fade bottom >
+              
       <div className="grid md:grid-cols-3 grid-cols-2 gap-8 rounded-lg p-5">
         {pictures.map((picture, index) => (
           <div key={index} className="rounded overflow-hidden">
-            <Fade bottom>
+            
+            <div data-aos="flip-left">
             <img src={picture} alt={`Picture ${index + 1}`} className="w-full" />
-            </Fade>
+            </div>
+           
           </div>
         ))}
       </div>
-      </Fade>
+   
     </div>
+    </Fade>
         </div>
     );
 };

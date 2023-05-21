@@ -24,7 +24,7 @@ const TabSection = () => {
            <div className="max-w-7xl mx-auto text-center" >
            <h1 style={{ fontFamily: "Mogra, cursive" }} className="text-5xl py-9 font-bold">Our Toys By Category</h1>
            <h1 style={{ fontFamily: "Mogra, cursive" }} className="text-3xl py-3 font-bold">Sub Categorys</h1>
-          <div className="my-5">
+          <div className="my-5 py-3 bg-pink-300">
           <div
               onClick={() => handleTabClick("wooden")}
               className={`tab  font-bold text-xl border-cyan-800    rounded-lg wooden ${

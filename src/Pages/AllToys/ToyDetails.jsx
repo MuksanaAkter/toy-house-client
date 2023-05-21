@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import Rating from "react-rating";
 import { useLoaderData } from "react-router-dom";
@@ -12,6 +13,9 @@ const ToyDetails = () => {
 
     return (
         <div>
+          <Helmet>
+        <title>Toy House | Detail</title>
+      </Helmet>
 
             <div className="hero min-h-screen bg-base-200">
   <div className="hero-content flex-col lg:flex-row-reverse">

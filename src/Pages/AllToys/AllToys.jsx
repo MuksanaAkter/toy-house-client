@@ -32,7 +32,7 @@ const AllToys = () => {
   return (
     <div>
       <Helmet>
-        <title>All Toys</title>
+        <title>Toy House | All Toys</title>
       </Helmet>
       <div style={{ fontFamily: "Mogra, cursive" }}  className="text-center text-5xl font-bold py-8 ">ALL Toys</div>
 

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const Error = () => {
     return (
         <div>
+          
            <section className=''>
               <div className='container  mx-auto '>
                <div className="flex justify-center mt-10">

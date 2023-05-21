@@ -34,7 +34,7 @@ const AddToy = () => {
   return (
     <div className="  ">
       <Helmet>
-        <title>Add Toy</title>
+        <title>Toy House | Add Toy</title>
       </Helmet>
       <div style={{ fontFamily: "Mogra, cursive" }} className="text-center text-5xl font-bold py-8 ">Add Toys</div>
       <form
@@ -54,7 +54,7 @@ const AddToy = () => {
               {...register("image")}
               placeholder="image link"
               type="url"
-              defaultValue="https://images.pexels.com/photos/2528118/pexels-photo-2528118.jpeg?auto=compress&cs=tinysrgb&w=600"
+              defaultValue="https://m.media-amazon.com/images/I/31QPmZKotmL._AC._SR360,460.jpg"
             />
           </div>
           <div>

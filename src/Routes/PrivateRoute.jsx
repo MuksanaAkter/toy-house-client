@@ -2,12 +2,17 @@ import { useContext } from 'react';
 import { Navigate } from 'react-router';
 import {useLocation} from 'react-router-dom'
 import { AuthContext } from '../Providers/AuthProvider';
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const PrivateRoute = ({children}) => {
     const {user, loading} = useContext(AuthContext);
     const location = useLocation()
+     const handleClick =() => {
+        //console.log('button clicked');
+        toast("You Have to Login first for view details");
+        return <Navigate to="/login" state={{from: location}} replace></Navigate>
+      };
 
     if(loading) {
         return (
@@ -28,7 +33,9 @@ const PrivateRoute = ({children}) => {
         return children;
     }
 
-    return <Navigate to="/login" state={{from: location}} replace></Navigate>;
+    return <>
+    {handleClick()}
+    </> 
 };
 
 export default PrivateRoute;

@@ -4,6 +4,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import signup from "../../assets/is_prev_ui.png";
 import Swal from 'sweetalert2'
+import { Helmet } from "react-helmet";
 const SignUp = () => {
   //     const [user, setUser] = useState(null);
   const [error, setPassError] = useState("");
@@ -68,6 +69,9 @@ const SignUp = () => {
       style={{ backgroundImage: `url(${backgroundImage})` ,backgroundSize:"cover" }}
       className="hero bg-base-200 w-full"
     >
+         <Helmet>
+        <title>Toy House | SignUp</title>
+      </Helmet>
       <div style={{ backgroundImage: `url(${backgroundImage})`,backgroundSize:"cover" }}
        className="hero-content shadow-2xl rounded-xl my-10 flex-col-reverse lg:flex-row bg-cyan-100 px-10">
         <div className=" mr-12 animate__animated animate__fadeInLeft ">

@@ -5,7 +5,7 @@ import { FaGoogle } from "react-icons/fa";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../../Firebase/firebase.config";
 import backgroundImageUrl from "../../assets/bg-11_prev_ui.png";
-import { ToastContainer } from "react-toastify";
+import { Helmet } from "react-helmet";
 // import Swal from 'sweetalert2'
 
 const Login = () => {
@@ -61,6 +61,9 @@ const Login = () => {
   return (
     
     <div>
+         <Helmet>
+        <title>Toy House | Login</title>
+      </Helmet>
       <div
         // style={{ backgroundImage: `url(${backgroundImage})` }}
         className="hero py-10 bg-cyan-200"
@@ -127,7 +130,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-      <ToastContainer />
+
     </div>
   );
 };

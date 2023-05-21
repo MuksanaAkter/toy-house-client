@@ -4,6 +4,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 // import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const MyToys = () => {
   const { user } = useContext(AuthContext);
@@ -42,6 +43,9 @@ const MyToys = () => {
 
   return (
     <div className=" pb-10">
+         <Helmet>
+        <title>Toy House | Mytoys</title>
+      </Helmet>
       <div style={{ fontFamily: "Mogra, cursive" }} className="text-center text-5xl font-bold py-8 ">My Toys</div>
       <table className="table-auto max-w-7xl mx-auto w-full">
         <thead className="py-5">

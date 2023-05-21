@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -37,6 +38,9 @@ const Update = () => {
 const bg="https://i.pinimg.com/originals/10/99/b8/1099b8a12b4e835b564a9ec4fe090480.jpg"
   return (
     <div>
+         <Helmet>
+        <title>Toy House | Update</title>
+      </Helmet>
       <div style={{ backgroundImage: `url(${bg})` ,backgroundSize:"cover", height:"" }} className="text-center text-5xl font-bold py-8 h-40">Update Form</div>
       <div className="bg-green-100 pt-10 p-10">
         <form onSubmit={handleUpdate} className=" text-center max-w-7xl mx-auto w-1/3 border bg-green-200 mb-10 shadow-lg" action="">

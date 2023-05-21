@@ -10,13 +10,13 @@ const WeeksPick = () => {
         
       <div className="max-w-7xl gap-4 mx-auto grid md:grid-cols-3  p-10 bg-pink-300">
         <div>
-            <img className="h-full w-full hover:animate-bounce" src="https://thumbs.dreamstime.com/b/child-playing-toy-dinosaurs-kids-toys-colorful-educational-little-boy-learning-fossils-reptiles-children-play-142780319.jpg" alt="" />
+            <img className="h-full w-full hover:animate-bounce" src="https://www.thespruce.com/thmb/8hVGXHaTMpFVPX14-XiXxJNy3xo=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/girls-hugging-teddy-bears-172601175-ad7bb41c81334f5da3bc024206b8a562.jpg" alt="" />
         </div>
         <div>
             <img className="hover:animate-bounce h-full w-full" src="https://m.media-amazon.com/images/I/91kuEIoIW8L._AC_UF894,1000_QL80_.jpg" alt="" />
         </div>
         <div>
-            <img className=" hover:animate-bounce h-full w-full" src="https://thumbs.dreamstime.com/b/little-girl-playing-animal-toys-playroom-114025782.jpg" alt="" />
+            <img className=" hover:animate-bounce h-full w-full" src="https://momlovesbest.com/wp-content/uploads/2019/02/Best-Stuffed-Animals-For-Kids-1-1.jpg" alt="" />
         </div>
         <div>
             <img className="hover:animate-bounce h-full w-full" src="https://cdn.shopify.com/s/files/1/0570/7009/products/farm-animals-set-of-8-149544_2048x.jpg?v=1634832819" alt="" />

@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import ToyDetails from "./ToyDetails";
 
 
 const AllToys = () => {
   const [alltoys, setalltoy] = useState([]);
-  const [toys, settoy] = useState([])
+  // const [toys, settoy] = useState([])
   const [searchText, setSearchText] = useState("");
   //console.log(searchText);
   useEffect(() => {
@@ -16,14 +16,6 @@ const AllToys = () => {
       });
   }, []);
   
-  useEffect(() => {
-    fetch(`https://toy-house-server-one.vercel.app/alltoys/${alltoys._id}`)
-      .then((res) => res.json())
-      .then((result) => {
-        settoy(result);
-      });
-  }, [alltoys]);
-  console.log(toys);
 
   const handleSearch = () => {
     fetch(`https://toy-house-server-one.vercel.app/getToys/${searchText}`)
@@ -39,6 +31,9 @@ const AllToys = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>All Toys</title>
+      </Helmet>
       <div style={{ fontFamily: "Mogra, cursive" }}  className="text-center text-5xl font-bold py-8 ">ALL Toys</div>
 
       <div className="search-box p-2 text-center">
@@ -88,11 +83,6 @@ const AllToys = () => {
         </tbody>
       </table>
 
-      <div className=" grid  grid-cols-2 gap-5 max-w-7xl mx-auto  ">
-        {toys?.map((toy) => (
-          <ToyDetails key={toy._id} toy={toy}></ToyDetails>
-        ))}
-      </div>
     </div>
   );
 };

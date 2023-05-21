@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from 'sweetalert2'
+import { Helmet } from "react-helmet";
 const AddToy = () => {
   const { user } = useContext(AuthContext);
   const {
@@ -32,6 +33,9 @@ const AddToy = () => {
 
   return (
     <div className="  ">
+      <Helmet>
+        <title>Add Toy</title>
+      </Helmet>
       <div style={{ fontFamily: "Mogra, cursive" }} className="text-center text-5xl font-bold py-8 ">Add Toys</div>
       <form
         className="max-w-7xl mx-auto bg-blue-200 py-8 px-8 mb-5 shadow-lg"

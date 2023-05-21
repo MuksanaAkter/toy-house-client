@@ -1,12 +1,16 @@
+import { Helmet } from "react-helmet";
 
 const bg="https://f2.toyhou.se/file/f2-toyhou-se/images/15548415_NPQGgIUidDh2OQK.png"
 
 const Blog = () => {
   return (
     <div>
+      <Helmet>
+        <title>Blog</title>
+      </Helmet>
       <div>
         <div className="">
-        <div style={{ backgroundImage: `url(${bg})` ,backgroundSize:"cover", height:"" }} className="text-center text-5xl font-bold py-8 h-40">Blog Page</div>
+        <div  style={{ backgroundImage: `url(${bg})` ,backgroundSize:"cover", height:"" }} className="text-center text-5xl font-bold py-8 h-40">Blog Page</div>
           <h1 className="text-center text-danger my-5"></h1>
         </div>
         <div>

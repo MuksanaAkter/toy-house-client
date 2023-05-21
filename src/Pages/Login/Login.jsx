@@ -5,6 +5,7 @@ import { FaGoogle } from "react-icons/fa";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../../Firebase/firebase.config";
 import backgroundImageUrl from "../../assets/bg-11_prev_ui.png";
+import { ToastContainer } from "react-toastify";
 // import Swal from 'sweetalert2'
 
 const Login = () => {
@@ -58,72 +59,7 @@ const Login = () => {
   const backgroundImage =
     "https://images.pond5.com/modern-light-blue-background-smooth-088763980_prevstill.jpeg";
   return (
-    // <div className="" >
-    //   <div className="hero  bg-slate-200 py-10">
-    //     <div className="hero-content flex-col lg:flex-row">
-    //       <div className="">
-    //         <img
-    //           src="https://t4.ftcdn.net/jpg/04/28/75/97/360_F_428759715_jsOPITlaytE3QXc2yI1D4U6uwZdVGkRp.jpg"
-    //           alt=""
-    //         />
-    //       </div>
-    //       <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-    //         <div className="card-body">
-    //           <h1 className="text-3xl text-center font-bold">Login</h1>
-    //           <form onSubmit={handleLogin}>
-    //             <div className="form-control">
-    //               <label className="label">
-    //                 <span className="label-text">Email</span>
-    //               </label>
-    //               <input
-    //                 type="text"
-    //                 name="email"
-    //                 placeholder="email"
-    //                 required
-    //                 className="input input-bordered"
-    //               />
-    //             </div>
-    //             <div className="form-control">
-    //               <label className="label">
-    //                 <span className="label-text">Password</span>
-    //               </label>
-    //               <input
-    //                 type="text"
-    //                 name="password"
-    //                 placeholder="password"
-    //                 required
-    //                 className="input input-bordered"
-    //               />
-    //               <h5 className="text-red-600 font-bold my-2">{error}</h5>
-    //               <label className="label">
-    //                 <a href="#" className="label-text-alt link link-hover">
-    //                   Forgot password?
-    //                 </a>
-    //               </label>
-    //             </div>
-    //             <div className="form-control mt-6">
-    //               <input
-    //                 className="btn btn-primary"
-    //                 type="submit"
-    //                 value="Login"
-    //               />
-    //             </div>
-    //           </form>
-    //           <p className="my-4 text-center">
-    //             New to Car Doctors{" "}
-    //             <Link className="text-orange-600 font-bold" to="/signup">
-    //               Sign Up
-    //             </Link>{" "}
-    //           </p>
-    //         </div>
-    //         <Button onClick={handleGoogle} className="me-3" variant="primary">
-    //           {" "}
-    //           <FaGoogle /> Login with Google
-    //         </Button>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
+    
     <div>
       <div
         // style={{ backgroundImage: `url(${backgroundImage})` }}
@@ -191,6 +127,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

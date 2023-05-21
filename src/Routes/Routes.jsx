@@ -51,7 +51,7 @@ const router = createBrowserRouter([
     },
       {
         path: '/update/:id', 
-        element:<Update></Update>,
+        element:<PrivateRoute><Update></Update></PrivateRoute>,
         loader:({params})=> fetch(`https://toy-house-server-one.vercel.app/mytoy/${params.id}`),
     },
     {

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Banner from "./Banner";
 import Brands from "./Brands";
 import FaqSection from "./FaqSection";
@@ -8,6 +9,9 @@ import WeeksPick from "./WeeksPick";
 const Home = () => {
     return (
         <div>
+             <Helmet>
+        <title>Toy House | Home</title>
+      </Helmet>
             <Banner></Banner>
             <GallerySection></GallerySection>
             <TabSection></TabSection>

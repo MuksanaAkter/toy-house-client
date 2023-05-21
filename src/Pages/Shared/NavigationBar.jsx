@@ -20,7 +20,7 @@ const NavigationBar = () => {
       </li>
       <li className="font-bold">
         {" "}
-        <Link to="/alltoy">All Toys</Link>{" "}
+        <Link to="/alltoys">All Toys</Link>{" "}
       </li>
 
       <li className="font-bold">

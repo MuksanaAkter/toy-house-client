@@ -67,7 +67,7 @@ const MyToys = () => {
             >
               <td className=" text-center p-3">{index + 1}</td>
               <td className="text-center p-3">
-                <img className="h-14 w-16" src={mytoy.image} alt="" />
+                <img className="h-20 w-20" src={mytoy.image} alt="" />
               </td>
               <td className="text-center p-3">{mytoy.toyName}</td>
               <td className="text-center p-3">{mytoy.sellername}</td>

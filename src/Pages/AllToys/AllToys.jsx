@@ -71,7 +71,7 @@ const AllToys = () => {
             <tr className=" bg-cyan-100  border-pink-400 border-4 gap-y-3 all-5 shadow-md" key={alltoy._id}>
               <td className=" text-center p-3">{index + 1}</td>
               <td className="text-center p-3">
-                <img className="h-14 w-16" src={alltoy.image} alt="" />
+                <img className="h-20 w-20" src={alltoy.image} alt="" />
               </td>
               <td className="text-center p-3">{alltoy.toyName}</td>
               <td className="text-center p-3">{alltoy.sellername}</td>
@@ -80,7 +80,7 @@ const AllToys = () => {
               <td className="text-center p-3"> {alltoy.quantity}</td>
               <td>
               <button className="btn btn-ghost btn-sm text-sm bg-green-500 m-2">
-              <Link to={'/detail'}>View Detail</Link>
+              <Link to={`/detail/${alltoy._id}`}>View Detail</Link>
               </button>
               </td>
             </tr>

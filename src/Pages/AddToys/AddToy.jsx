@@ -37,6 +37,7 @@ const AddToy = () => {
         <title>Toy House | Add Toy</title>
       </Helmet>
       <div style={{ fontFamily: "Mogra, cursive" }} className="text-center text-5xl font-bold py-8 ">Add Toys</div>
+      <hr className="w-1/4 mx-auto  pb-4" />
       <form
         className="max-w-7xl mx-auto bg-blue-200 py-8 px-8 mb-5 shadow-lg"
         onSubmit={handleSubmit(onSubmit)}
@@ -59,11 +60,11 @@ const AddToy = () => {
           </div>
           <div>
             <label className="label">
-              <span className="label-text">Toy Name</span>
+              <span className="label-text text-xl font-semibold">Toy Name</span>
             </label>
             <input
             required
-              className="w-full text-input p-5 my-3"
+              className="w-full text-input p-5 my-3 shadow-lg"
               {...register("toyName")}
               placeholder="name"
               defaultValue="pikachu"
@@ -71,11 +72,11 @@ const AddToy = () => {
           </div>
           <div>
             <label className="label">
-              <span className="label-text">Seller Name</span>
+              <span className="label-text text-xl font-semibold">Seller Name</span>
             </label>
             <input
             required
-              className=" w-full text-input p-5 my-3"
+              className=" w-full text-input p-5 my-3 shadow-lg"
               {...register("sellername")}
               placeholder="name"
               defaultValue={user?.displayName}
@@ -83,11 +84,11 @@ const AddToy = () => {
           </div>
           <div>
             <label className="label">
-              <span className="label-text">Seller Email</span>
+              <span className="label-text text-xl font-semibold">Seller Email</span>
             </label>
             <input
             required
-              className="w-full text-input p-5 my-3"
+              className="w-full text-input p-5 my-3 shadow-lg"
               {...register("email")}
               placeholder="email"
               value={user?.email}
@@ -95,11 +96,11 @@ const AddToy = () => {
           </div>
           <div>
             <label className="label">
-              <span className="label-text">Price</span>
+              <span className="label-text text-xl font-semibold">Price</span>
             </label>
             <input
             required
-              className="w-full text-input p-5"
+              className="w-full text-input p-5 shadow-lg"
               {...register("price")}
               placeholder="Price"
               defaultValue="20"
@@ -107,11 +108,11 @@ const AddToy = () => {
           </div>
           <div>
             <label className="label">
-              <span className="label-text">Quantity</span>
+              <span className="label-text text-xl font-semibold">Quantity</span>
             </label>
             <input
             required
-              className=" w-full text-input p-5 my-3"
+              className=" w-full text-input p-5 my-3 shadow-lg"
               {...register("quantity")}
               placeholder="Quantity"
               defaultValue="4"
@@ -119,11 +120,11 @@ const AddToy = () => {
           </div>
           <div>
             <label className="label">
-              <span className="label-text">Rating</span>
+              <span className="label-text text-xl font-semibold">Rating</span>
             </label>
             <input
             required
-              className=" w-full text-input p-5 my-3"
+              className=" w-full text-input p-5 my-3 shadow-lg"
               {...register("rating")}
               placeholder="Rating"
               defaultValue="4.0"
@@ -131,9 +132,9 @@ const AddToy = () => {
           </div>
           <div>
             <label className="label">
-              <span className="label-text">Toy Category</span>
+              <span className="label-text text-xl font-semibold">Toy Category</span>
             </label>
-            <select className="text-input p-5 w-1/2" {...register("category")}>
+            <select className="text-input p-5 w-1/2 shadow-lg" {...register("category")}>
               <option value="wooden">Wooden</option>
               <option value="plastic">Plastic</option>
               <option value="plush">Plush</option>
@@ -142,7 +143,7 @@ const AddToy = () => {
           </div>
           <div>
             <label className="label">
-              <span className="label-text">Detail Description</span>
+              <span className="label-text text-xl font-semibold">Detail Description</span>
             </label>
             {/* <input
               className="text-input p-5 my-3 w-full h-20"
@@ -155,7 +156,7 @@ const AddToy = () => {
               id=""
               cols="70"
               rows="6"
-              className="text-input p-5 my-3 w-full h-20"
+              className="text-input p-5 my-3 w-full h-20 shadow-lg"
               {...register("detail")}
               placeholder="Details"
               defaultValue="A wooden toy is a toy constructed primarily from wood and wood products. Additional components made from other materials are also sometimes used."

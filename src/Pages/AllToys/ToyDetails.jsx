@@ -12,12 +12,14 @@ const ToyDetails = () => {
     const { toyName ,quantity, sellername , email, detail , price , rating, image , category} = toyDetails;
 
     return (
-        <div>
+        <div className="bg-base-200">
           <Helmet>
         <title>Toy House | Detail</title>
       </Helmet>
+      <h1 style={{ fontFamily: "Mogra, cursive" }} className="text-center  text-pink-600 md:text-4xl text-3xl font-semibold mb-8 pt-9">Toys Details</h1>
 
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero  ">
+            
   <div className="hero-content flex-col lg:flex-row-reverse">
     <img src={image} className="max-w-md rounded-lg shadow-2xl w-full" />
     <div>
@@ -39,7 +41,7 @@ const ToyDetails = () => {
                   ></Rating>
                      <span className='mx-2'> {rating}</span>
          </div>
-      <button className="btn btn-outline btn-secondary  my-3">Get Started</button>
+         <button className="btn btn-primary bg-cyan-800 border-0 mr-5">Explore More</button>
     </div>
   </div>
 </div>

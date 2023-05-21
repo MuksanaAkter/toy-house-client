@@ -23,6 +23,7 @@ const GallerySection = () => {
     return (
         <div className="bg-blue-100  pb-5">
             <h1 style={{ fontFamily: "Mogra, cursive" }} className="text-center text-5xl font-semibold mb-8 pt-9">Toys Gallery Section</h1>
+            <p className=" mx-auto w-1/2 text-center my-3 pb-5">A toy gallery is a collection or display of various toys, showcasing a wide range of options for children or toy enthusiasts. It is a visual representation of different types of toys, including action figures, dolls, vehicles, puzzles, board games, plush toys, and more. The gallery provides an opportunity for people to explore and appreciate the diversity of toys available.</p>
             <Fade buttom >
             <div className="max-w-7xl bg-blue-300 mx-auto shadow-2xl mb-8 pb-8">
               

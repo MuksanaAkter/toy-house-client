@@ -7,6 +7,7 @@ const WeeksPick = () => {
   return (
     <div className="slider-container my-5 bg-pink-100">
           <h1 style={{ fontFamily: "Mogra, cursive" }} className="text-center text-cyan-600 text-5xl font-semibold mb-8 pt-9">Our Weekly Top Pick Toys</h1>
+          <p className=" mx-auto w-1/2 text-center my-3 pb-5">Featuring the weekly best toys, parents can stay updated on the latest toy releases and make informed decisions when purchasing toys for their children. The selection offers a mix of entertainment, learning, and developmental value, ensuring that children have access to the best toys available in the market.</p>
         
       <div className="max-w-7xl gap-4 mx-auto grid md:grid-cols-3  p-10 bg-pink-300">
         <div>

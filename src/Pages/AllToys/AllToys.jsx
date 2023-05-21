@@ -35,6 +35,7 @@ const AllToys = () => {
         <title>Toy House | All Toys</title>
       </Helmet>
       <div style={{ fontFamily: "Mogra, cursive" }}  className="text-center text-5xl font-bold py-8 ">ALL Toys</div>
+      <hr className="w-1/4 mx-auto  pb-4" />
 
       <div className="search-box p-2 text-center">
           <input
@@ -56,7 +57,7 @@ const AllToys = () => {
             <th>Toy Name</th>
             <th className="mx-3 p-3">Seller Name</th>
             <th>Category</th>
-            <th>Price</th>
+            <th>Price $</th>
             <th className="mx-3 p-3">Quantity</th>
             <th>view</th>
           </tr>

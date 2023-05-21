@@ -31,7 +31,7 @@ const MyToys = () => {
             Swal.fire({
             icon: 'success',
             title: 'Success!',
-            text: 'Uptaded Toy Successfully',
+            text: 'Deleted Toy Successfully',
                
           })
             const remaining = mytoys.filter((mytoy) => mytoy._id !== id);
@@ -47,6 +47,7 @@ const MyToys = () => {
         <title>Toy House | Mytoys</title>
       </Helmet>
       <div style={{ fontFamily: "Mogra, cursive" }} className="text-center text-5xl font-bold py-8 ">My Toys</div>
+      <hr className="w-1/4 mx-auto  pb-4" />
       <table className="table-auto max-w-7xl mx-auto w-full">
         <thead className="py-5">
           <tr>
@@ -55,7 +56,7 @@ const MyToys = () => {
             <th>Toy Name</th>
             <th className="mx-3 p-3">Seller Name</th>
             <th>Seller Email</th>
-            <th>Price</th>
+            <th>Price $</th>
             <th className="mx-3 p-3">Quantity</th>
             <th>Rating</th>
             <th className="w-60">Description</th>

@@ -14,7 +14,7 @@ const ToyCard = ({toy}) => {
   <figure><img className="h-40 w-30 m-3" src={image} alt=""/></figure>
   <div className="card-body">
     <h2 className="card-title mt-2"><span className="text-pink-600">Toy Name:</span> {toyName}</h2>
-    <h2 className="card-title my-2"><span className="text-pink-600">Toy Price:</span> {price}</h2>
+    <h2 className="card-title my-2"><span className="text-pink-600">Toy Price:</span>$ {price}</h2>
     
     <div className='d-flex align-items-enter'>
         <Rating
